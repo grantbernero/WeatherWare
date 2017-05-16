@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Transparent.png",
+      "filename" : "Windy.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Transparent-1.png",
+      "filename" : "Windy-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Transparent-2.png",
+      "filename" : "Windy-2.png",
       "scale" : "3x"
     }
   ],
