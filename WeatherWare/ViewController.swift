@@ -12,10 +12,16 @@ class ViewController: UIViewController
 {
     var weather = [[String: String]]()
     var temperature = 0
+    var forecast = ""
+  //  var forecastPic:UIImage? = nil
+    
     
     @IBOutlet weak var tempDisplay: UILabel!
     
+    @IBOutlet weak var forecastDisplay: UILabel!
    
+    @IBOutlet weak var forecastImageDisplay: UIImageView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -33,6 +39,8 @@ class ViewController: UIViewController
         }
         
         tempDisplay.text = "\(temperature)ºF"
+        forecastDisplay.text = "\(forecast)"
+   //     forecastImageDisplay.image = forecastPic
   
     }
     
@@ -43,9 +51,8 @@ class ViewController: UIViewController
         let result = json["currently"].dictionaryValue
         temperature = result["temperature"]!.intValue
         print(temperature)
-        
-        //forecast = result["summary"]!.string
-        //forecastPic = result["icon"]!.image 
+        forecast = result["summary"]!.stringValue
+     //   forecastPic = result["icon"]!
         
     }
     

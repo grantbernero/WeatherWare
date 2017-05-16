@@ -13,11 +13,14 @@ class OutfitViewController: UIViewController
 
     var weatherDetail:WeatherClass!
     var myTemp = 0
+    @IBOutlet weak var outfitTempLabel: UILabel!
+    
     
   override func viewDidLoad()
     {
         super.viewDidLoad()
         print(myTemp)
+        outfitTempLabel.text = "today's outfit suggestions for \(myTemp)ºF"
       
     }
     
@@ -87,10 +90,10 @@ class OutfitViewController: UIViewController
         
         if myTemp > 32 && myTemp < 60
         {
-             topPic.image = UIImage(named:"F-LongSleeve")
+             topPic.image = UIImage(named:"F-Longsleeve")
              bottomsPic.image = UIImage(named:"F-LongPants")
              shoesPic.image = UIImage(named:"F-Shoes")
-             accessoriesPic.image = UIImage(named:"F-Purse")
+             accessoriesPic.image = UIImage(named:"F-Pursejpg")
              jacketPic.image = UIImage(named:"F-LightJacket")
              extraPic.image = UIImage(named:"F-LongDress")
         }
@@ -100,7 +103,7 @@ class OutfitViewController: UIViewController
              topPic.image = UIImage(named:"F-ShortSleeve")
              bottomsPic.image = UIImage(named:"F-Skirt")
              shoesPic.image = UIImage(named:"F-Shoes")
-             accessoriesPic.image = UIImage(named:"F-Sunglasses")
+             accessoriesPic.image = UIImage(named:"F-Pursejpg")
              jacketPic.image = UIImage(named:"transparent")
              extraPic.image = UIImage(named:"ShortDress")
         }
